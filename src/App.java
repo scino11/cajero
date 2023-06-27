@@ -30,7 +30,7 @@ public class App {
         System.out.print("Tiene tres intentos para ingresar a su cuenta.");
 
         do {
-            System.out.print("Por favor, ingrese el su nombre: ");
+            System.out.print("Por favor, ingrese su nombre completo: ");
             nombre = scanner.nextLine();
             contador++;
             System.out.print("Por favor, ingrese la contraseña de su cuenta: ");
@@ -63,7 +63,7 @@ public class App {
             System.out.println();
             System.out.println("Por favor, seleccione la opción que desea realizar: ");
             System.out.println("1- Ingresar dinero.");
-            System.out.println("2- Ingresar retirar.");
+            System.out.println("2- Retirar dinero.");
             System.out.println("3- Salir del cajero.");
 
             operacion = scanner.nextInt();
@@ -82,10 +82,13 @@ public class App {
 
                     System.out.println("Dinero a retirar:");
                     retiro = scanner.nextDouble();
-                    montoinicial -= retiro;
-                    System.out.println("Usted retiró: " + retiro + " y tiene un saldo de: " + montoinicial);
+                    if (retiro > montoinicial) {
+                        System.out.println("El monto ingresado es mayor que el saldo disponible.");
+                    } else {
+                        montoinicial -= retiro;
+                        System.out.println("Usted retiró: " + retiro + " y tiene un saldo de: " + montoinicial);
+                    }
                     break;
-
                 case 3:
 
                     System.out.println("Saliendo del cajero...");
