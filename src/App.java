@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
-    // se declaran las variables, un scanner, y una variable ll lamada historia que
+    // se declaran las variables, un scanner, y una variable llamada historia que
     // es un arraylist.
     static Scanner scanner = new Scanner(System.in);
     static int contador = 0;
