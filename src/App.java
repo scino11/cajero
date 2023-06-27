@@ -92,7 +92,7 @@ public class App {
                         System.out.println("El monto ingresado es mayor que el saldo disponible.");
                     } else {
                         montoinicial -= retiro;
-                        System.out.println("Usted retiró: " + retiro + " y tiene un saldo de: " + montoinicial);
+                        System.out.println("Usted retiró: " + retiro + "$" + " y tiene un saldo de: " + montoinicial + "$");
                         // historial.add agrega el retiro al arrayList.
                         historial.add("Retiró " + retiro + "$");
                     }
